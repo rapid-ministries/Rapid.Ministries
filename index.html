@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rapid Ministries | Disaster Relief</title>
+<meta name="description" content="Rapid Ministries is a full-time, faith-based disaster relief ministry sharing the love of Jesus through cleanup, tree removal, and rebuilding after natural disasters.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800;900&family=Inter:wght@400;500;600&family=Lora:ital,wght@1,500&display=swap" rel="stylesheet">
+<style>
+:root{--red:#C8102E;--red-dark:#9E0B23;--ink:#141414;--ink2:#2a2a2a;--cream:#F6F1EA;--gray:#E9E4DC;--white:#fff;--muted:#5d5852}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.6;font-size:17px}
+h1,h2,h3{font-family:Archivo,Inter,sans-serif;line-height:1.1;letter-spacing:-.01em}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+.eyebrow{display:inline-block;font-family:Archivo,sans-serif;font-weight:800;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--red);margin-bottom:14px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:15px 28px;border-radius:6px;font-weight:600;text-decoration:none;font-size:1rem;transition:.2s;border:2px solid transparent}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:var(--red-dark)}
+.btn-ghost{border-color:rgba(255,255,255,.7);color:#fff}
+.btn-ghost:hover{background:#fff;color:var(--ink)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:#000}
+.btn-outline{border-color:var(--ink);color:var(--ink)}
+.btn-outline:hover{background:var(--ink);color:#fff}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--gray)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:Archivo,sans-serif;font-weight:900;font-size:1.25rem;letter-spacing:-.02em}
+.logo-mark{width:36px;height:36px;border-radius:8px;background:var(--red);display:grid;place-items:center}
+.logo span{color:var(--red)}
+.nav ul{display:flex;list-style:none;gap:28px;align-items:center}
+.nav ul a{text-decoration:none;font-weight:500;font-size:.95rem;color:var(--ink2)}
+.nav ul a:hover{color:var(--red)}
+.nav .btn{padding:10px 20px;font-size:.9rem}
+.nav ul a.btn-red{color:#fff}
+
+/* hero */
+.hero{position:relative;color:#fff;background:
+ radial-gradient(1200px 500px at 85% 10%,rgba(200,16,46,.55),transparent 60%),
+ linear-gradient(135deg,#1a1a1a 0%,#0e0e0e 55%,#3a0710 100%);overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(-45deg,rgba(255,255,255,.025) 0 2px,transparent 2px 14px);pointer-events:none}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding-top:110px;padding-bottom:120px}
+.hero .eyebrow{color:#ff8a9b}
+.hero h1{font-size:clamp(2.6rem,5.6vw,4.4rem);font-weight:900;margin-bottom:22px}
+.hero h1 em{font-style:normal;color:var(--red);background:#fff;padding:0 .18em;border-radius:4px;display:inline-block;transform:rotate(-1.5deg)}
+.hero p{font-size:1.2rem;color:#d8d3cd;max-width:540px;margin-bottom:34px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.photo{border-radius:14px;display:flex;align-items:flex-end;padding:18px;font-size:.85rem;font-weight:600;letter-spacing:.04em;color:rgba(255,255,255,.9);position:relative;overflow:hidden}
+.photo::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(255,255,255,.06) 0 10px,transparent 10px 20px)}
+.photo span{position:relative;background:rgba(0,0,0,.45);padding:6px 12px;border-radius:4px}
+.hero .photo{aspect-ratio:4/5;background:linear-gradient(160deg,#C8102E,#5b0614);box-shadow:0 30px 60px rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.15)}
+
+.pic{position:relative;margin:0;border-radius:16px;overflow:hidden;aspect-ratio:4/3;background:#222}
+.pic img{display:block;width:100%;height:100%;object-fit:cover}
+.pic figcaption{position:absolute;left:14px;bottom:14px;background:rgba(0,0,0,.6);color:#fff;font-size:.85rem;font-weight:600;padding:7px 13px;border-radius:6px;backdrop-filter:blur(4px)}
+.hero-pic{box-shadow:0 30px 60px rgba(0,0,0,.5);border:3px solid rgba(255,255,255,.12);transform:rotate(1.5deg)}
+.story-pic{box-shadow:0 24px 50px rgba(0,0,0,.4)}
+/* mission strip */
+.mission{background:var(--red);color:#fff}
+.mission .wrap{display:flex;gap:30px;align-items:center;justify-content:space-between;padding-top:34px;padding-bottom:34px;flex-wrap:wrap}
+.mission p{font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(1.25rem,2.4vw,1.6rem);max-width:780px;line-height:1.3}
+.mission small{font-size:.85rem;opacity:.85;text-transform:uppercase;letter-spacing:.14em;font-weight:600}
+
+section{padding:100px 0}
+.sec-head{max-width:640px;margin-bottom:52px}
+.sec-head h2{font-size:clamp(2rem,4vw,2.8rem);font-weight:900;margin-bottom:14px}
+.sec-head p{color:var(--muted);font-size:1.1rem}
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.card{background:var(--cream);border-radius:14px;padding:30px 26px;border-top:5px solid var(--red);transition:.25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,.08)}
+.icon{width:54px;height:54px;border-radius:12px;background:var(--ink);display:grid;place-items:center;margin-bottom:20px}
+.card h3{font-size:1.25rem;font-weight:800;margin-bottom:10px}
+.card p{color:var(--muted);font-size:.98rem}
+
+/* story */
+.story{background:var(--ink);color:#fff}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.story .photo{aspect-ratio:5/4;background:linear-gradient(135deg,#3a3a3a,#1d1d1d);border:1px solid #333}
+.story h2{font-size:clamp(2rem,4vw,2.7rem);font-weight:900;margin-bottom:20px}
+.story p{color:#cfcac4;margin-bottom:18px}
+.timeline{list-style:none;margin-top:28px;border-left:3px solid var(--red);padding-left:24px}
+.timeline li{position:relative;margin-bottom:22px}
+.timeline li::before{content:"";position:absolute;left:-33px;top:5px;width:15px;height:15px;border-radius:50%;background:var(--red);border:3px solid var(--ink)}
+.timeline b{display:block;font-family:Archivo,sans-serif;color:#fff;font-size:1.05rem}
+.timeline span{color:#a9a39c;font-size:.95rem}
+
+/* verse */
+.verse{background:linear-gradient(120deg,var(--red) 0%,var(--red-dark) 100%);color:#fff;text-align:center;padding:90px 0;position:relative;overflow:hidden}
+.verse::before{content:"\201C";position:absolute;font-family:Lora,serif;font-size:22rem;line-height:1;top:-40px;left:50%;transform:translateX(-50%);opacity:.08}
+.verse blockquote{position:relative;font-family:Lora,serif;font-style:italic;font-weight:500;font-size:clamp(1.6rem,3.6vw,2.6rem);max-width:860px;margin:0 auto 20px;line-height:1.35}
+.verse cite{font-style:normal;font-family:Archivo,sans-serif;font-weight:800;letter-spacing:.18em;text-transform:uppercase;font-size:.9rem;opacity:.9}
+
+/* faith */
+.faith{background:var(--cream)}
+.faith-box{background:#fff;border-radius:18px;padding:64px;display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:center;box-shadow:0 20px 50px rgba(0,0,0,.06)}
+.cross{width:120px;height:120px;border-radius:50%;background:var(--red);display:grid;place-items:center;flex-shrink:0}
+.faith h2{font-size:clamp(1.9rem,3.6vw,2.6rem);font-weight:900;margin-bottom:8px}
+.faith h3{font-size:1.25rem;color:var(--red);margin-bottom:16px;font-weight:800}
+.faith p{color:var(--muted);margin-bottom:24px;max-width:620px}
+
+/* involved */
+.help-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.help{border-radius:18px;padding:44px 40px;display:flex;flex-direction:column}
+.help.pray{background:var(--cream)}
+.help.give{background:var(--ink);color:#fff}
+.help h3{font-size:1.7rem;font-weight:900;margin:18px 0 12px}
+.help p{margin-bottom:18px}
+.help.pray p{color:var(--muted)}
+.help.give p{color:#cfcac4}
+.help ul{list-style:none;margin-bottom:28px}
+.help li{padding:9px 0 9px 30px;position:relative;border-bottom:1px solid rgba(0,0,0,.08)}
+.help.give li{border-color:rgba(255,255,255,.12)}
+.help li::before{content:"";position:absolute;left:0;top:15px;width:14px;height:14px;border-radius:50%;background:var(--red)}
+.help .btn{align-self:flex-start;margin-top:auto}
+.help .icon{background:var(--red)}
+.pill{display:inline-block;background:rgba(200,16,46,.18);color:#ff8a9b;font-weight:600;font-size:.85rem;padding:5px 12px;border-radius:99px;margin-right:6px;margin-bottom:8px}
+.mail{background:rgba(255,255,255,.06);border:1px dashed rgba(255,255,255,.25);border-radius:10px;padding:16px 18px;margin-bottom:26px;font-size:.95rem;color:#e8e3dd}
+
+/* footer */
+footer{background:#0b0b0b;color:#bdb7b0;padding:70px 0 30px}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:46px}
+footer .logo{color:#fff;margin-bottom:14px}
+footer h4{font-family:Archivo,sans-serif;color:#fff;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
+footer address{font-style:normal;line-height:1.8}
+footer ul{list-style:none}
+footer li{margin-bottom:8px}
+footer a{text-decoration:none}
+footer a:hover{color:#fff}
+.foot-bottom{border-top:1px solid #222;padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.85rem}
+
+/* responsive */
+@media (max-width:980px){
+ .cards{grid-template-columns:1fr 1fr}
+ .hero-grid,.story-grid{grid-template-columns:1fr}
+ .hero-pic{transform:none}
+ .foot{grid-template-columns:1fr 1fr}
+}
+@media (max-width:720px){
+ body{font-size:16px}
+ .nav ul li:not(:last-child){display:none}
+ section{padding:70px 0}
+ .hero-grid{padding-top:64px;padding-bottom:72px;gap:36px}
+ .cards,.help-grid,.foot{grid-template-columns:1fr}
+ .faith-box{grid-template-columns:1fr;padding:38px 26px;gap:24px;text-align:center}
+ .faith-box .cross{margin:0 auto;width:90px;height:90px}
+ .faith p{margin-left:auto;margin-right:auto}
+ .help{padding:34px 26px}
+ .hero-btns .btn{flex:1;justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="wrap nav">
+  <a href="#top" class="logo">
+   <span class="logo-mark"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"><path d="M12 3v18M6 9h12"/></svg></span>
+   Rapid<span>Ministries</span>
+  </a>
+  <ul>
+   <li><a href="#what">What We Do</a></li>
+   <li><a href="#story">Our Story</a></li>
+   <li><a href="#faith">Faith</a></li>
+   <li><a href="#involved">Get Involved</a></li>
+   <li><a href="https://www.rapidministries.org/" class="btn btn-red">Give</a></li>
+  </ul>
+ </div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding:0">
+ <div class="wrap hero-grid">
+  <div>
+   <span class="eyebrow">Faith-based disaster relief</span>
+   <h1>When disaster hits, we <em>show up.</em></h1>
+   <p>We're a family on the road full-time, bringing chainsaws, a skid loader, and the love of Jesus to communities picking up the pieces.</p>
+   <div class="hero-btns">
+    <a href="https://www.rapidministries.org/" class="btn btn-red">Give Today</a>
+    <a href="#involved" class="btn btn-ghost">Get Involved</a>
+   </div>
+  </div>
+  <figure class="pic hero-pic"><img src="images/family.jpg" alt="The Rapid Ministries family on the road" width="1600" height="1200"><figcaption>Living on the road, serving where the need is</figcaption></figure>
+ </div>
+</section>
+
+<div class="mission">
+ <div class="wrap">
+  <p>Our mission: share the love of Jesus and the hope of salvation by serving people hit hardest by natural disasters.</p>
+  <small>Full-time &middot; Nationwide &middot; Donor-funded</small>
+ </div>
+</div>
+
+<section id="what">
+ <div class="wrap">
+  <div class="sec-head">
+   <span class="eyebrow">What we do</span>
+   <h2>Hands-on help, right when it matters.</h2>
+   <p>We go where the need is greatest in the days after a major storm, and we stay useful long after the headlines fade.</p>
+  </div>
+  <div class="cards">
+   <div class="card">
+    <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+    <h3>Rapid Response</h3>
+    <p>Because ministry is our full-time work, we can pack up and head out as soon as a disaster strikes, anywhere in the country.</p>
+   </div>
+   <div class="card">
+    <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 5 12h4l-3 5h12l-3-5h4z"/><path d="M12 17v5"/></svg></div>
+    <h3>Cleanup &amp; Tree Removal</h3>
+    <p>Downed trees, debris, and wreckage: we clear the way so families can get back into their homes and start recovering.</p>
+   </div>
+   <div class="card">
+    <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 3l9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></div>
+    <h3>Repairs &amp; Rebuilding</h3>
+    <p>When the emergency phase is over, we put our construction skills to work helping people rebuild what the storm took.</p>
+   </div>
+   <div class="card">
+    <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M2 20c0-3 3-5 6-5s6 2 6 5"/><path d="M14 15.5c.6-.3 1.3-.5 2-.5 3 0 6 2 6 5"/></svg></div>
+    <h3>Partnering with Others</h3>
+    <p>We love joining forces with churches and groups who want to share Jesus' love. More hands means more people helped.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="story" id="story">
+ <div class="wrap story-grid">
+  <figure class="pic story-pic"><img src="images/equipment.jpg" alt="Rapid Ministries truck and equipment trailer" width="1600" height="1200"><figcaption>Our equipment, ready to roll</figcaption></figure>
+  <div>
+   <span class="eyebrow">Our story</span>
+   <h2>A family, a truck, and a calling.</h2>
+   <p>God put it on our hearts to go and serve people in the hardest moments after a disaster. So we made it our full-time work, living on the road and following the need from one community to the next.</p>
+   <ul class="timeline">
+    <li><b>Answering the call</b><span>We began traveling the country to help with tree removal, cleanup, and repairs.</span></li>
+    <li><b>2022: A game-changer</b><span>By God's provision, we bought a skid loader, and it multiplied the work we can do on every site.</span></li>
+    <li><b>What's next</b><span>We're praying to bring more heavy equipment and more skilled volunteers to every disaster zone we serve.</span></li>
+   </ul>
+  </div>
+ </div>
+</section>
+
+<div class="verse">
+ <div class="wrap">
+  <blockquote>As each has received a gift, use it to serve one another.</blockquote>
+  <cite>1 Peter 4:10</cite>
+ </div>
+</div>
+
+<section class="faith" id="faith">
+ <div class="wrap">
+  <div class="faith-box">
+   <div class="cross"><svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><path d="M12 2v20M5 8h14"/></svg></div>
+   <div>
+    <span class="eyebrow">The most important part</span>
+    <h2>Do you believe in God?</h2>
+    <h3>Have you put your faith in Him?</h3>
+    <p>Clearing trees and fixing roofs is what we do, but it isn't why we do it. We serve because Jesus first loved us, and we'd love nothing more than for you to know Him too. If you have questions about faith, we'd be glad to talk.</p>
+    <a href="#contact" class="btn btn-outline">Reach out to us</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="involved">
+ <div class="wrap">
+  <div class="sec-head">
+   <span class="eyebrow">Get involved</span>
+   <h2>Two ways to stand with us.</h2>
+   <p>Every prayer and every gift helps keep us on the road and serving people in need.</p>
+  </div>
+  <div class="help-grid">
+   <div class="help pray">
+    <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z"/></svg></div>
+    <h3>Pray for us</h3>
+    <p>Prayer is the fuel for everything we do. Here's how you can lift us up:</p>
+    <ul>
+     <li>Our family's safety and strength on the road</li>
+     <li>That God would use us to show people how real He is</li>
+     <li>That our story would help others grow in faith</li>
+     <li>Provision for the ministry</li>
+     <li>Wisdom as we move from place to place</li>
+    </ul>
+    <a href="#contact" class="btn btn-dark">I'll pray for you</a>
+   </div>
+   <div class="help give">
+    <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v9H4v-9"/><path d="M2 7h20v5H2z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></div>
+    <h3>Give</h3>
+    <p>We're funded entirely by donations. If God leads you to give, your support keeps us out there serving.</p>
+    <div><span class="pill">100% donation funded</span><span class="pill">Tax deductible</span></div>
+    <div class="mail" style="margin-top:14px"><strong>Prefer to mail a check?</strong><br>Rapid Ministries, 20937 SW Indianola, Douglass, KS 67039</div>
+    <a href="https://www.rapidministries.org/" class="btn btn-red">Donate online</a>
+   </div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer id="contact">
+ <div class="wrap">
+  <div class="foot">
+   <div>
+    <a href="#top" class="logo"><span class="logo-mark"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"><path d="M12 3v18M6 9h12"/></svg></span>Rapid<span>Ministries</span></a>
+    <p>Sharing the love of Jesus by helping people recover after major natural disasters.</p>
+   </div>
+   <div>
+    <h4>Mailing address</h4>
+    <address>Rapid Ministries<br>20937 SW Indianola<br>Douglass, KS 67039</address>
+   </div>
+   <div>
+    <h4>Explore</h4>
+    <ul>
+     <li><a href="#what">What We Do</a></li>
+     <li><a href="#story">Our Story</a></li>
+     <li><a href="#involved">Get Involved</a></li>
+     <li><a href="https://www.rapidministries.org/">Give online</a></li>
+    </ul>
+   </div>
+  </div>
+  <div class="foot-bottom">
+   <span>&copy; Rapid Ministries</span>
+  </div>
+ </div>
+</footer>
+</body>
+</html>
